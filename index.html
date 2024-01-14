@@ -2,32 +2,216 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>
-      Raw Recorder
-    </title>
+    <title>Raw Recorder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- App css -->
+    <link
+      href="../assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="bs-default-stylesheet"
+    />
+    <link
+      href="../assets/css/app.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-default-stylesheet"
+    />
+
+    <link
+      href="../assets/css/bootstrap-dark.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="bs-dark-stylesheet"
+      disabled
+    />
+    <link
+      href="../assets/css/app-dark.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-dark-stylesheet"
+      disabled
+    />
+
+    <!-- icons -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Raw Recorder</h1>
-    <p>Start your Recording</p>
-    <div id="controls">
-      <button id="recordButton">Record</button>
-      <button id="pauseButton" disabled>Pause</button>
-      <button id="stopButton" disabled>Stop</button>
-    </div>
-    <div id="formats">Format: start recording to see sample rate</div>
-    <p><strong>Recordings:</strong></p>
-    <ol id="recordingsList"></ol>
-    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div>
+            <h1>Raw Recorder</h1>
+            <h3>Contribute Your Voice</h3>
+            <p>
+              🎙️ Hello language enthusiasts! 🌐 Help us build a comprehensive
+              dataset for Bangladesh's local language by contributing your
+              unique voice! Your participation is crucial in advancing machine
+              learning for our rich linguistic heritage.
+            </p>
+            <p>
+              Bangla local language word Dataset
+              <a
+                href="https://docs.google.com/spreadsheets/d/1dgAEcIw67VZlmqQ23qMaK7monXONs54jZo9dFlvNjeA/edit?usp=sharing"
+                >click here</a
+              >
+            </p>
+            <p>
+              After completing the recording, Download it and go to the google
+              Form, Upload the audio files there.
+            </p>
+            <a href="https://forms.gle/YmnNfyvt4CgVoQoL9"
+              ><p>Google Form click here</p></a
+            >
+          </div>
 
-    <h1>Contribute Your Voice</h1>
-    <p>🎙️ Hello language enthusiasts! 🌐 Help us build a comprehensive dataset for Bangladesh's local language by contributing your unique voice! Your participation is crucial in advancing machine learning for our rich linguistic heritage.</p>
-    <p>Bangla local language word Dataset <a href="https://docs.google.com/spreadsheets/d/1dgAEcIw67VZlmqQ23qMaK7monXONs54jZo9dFlvNjeA/edit?usp=sharing">click here</a></p>
-    <p>After completing the recording, Download it and go to the google Form, Upload the audio files there.</p>
-    <a href="https://forms.gle/YmnNfyvt4CgVoQoL9"><p>Google Form click here</p></a>
+          <div>
+            <h1>Start your Recording</h1>
+            <div id="controls">
+              <button id="recordButton">Record</button>
+              <button id="pauseButton" disabled>Pause</button>
+              <button id="stopButton" disabled>Stop</button>
+            </div>
+            <div id="formats">Format: start recording to see sample rate</div>
+            <p><strong>Recordings:</strong></p>
+            <ol id="recordingsList"></ol>
+            <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+          </div>
+          <!-- end card-body-->
+        </div>
+        <!-- end card-->
+      </div>
+      <!-- end col-->
+
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="header-title">Data Table</h4>
+            <table
+              id="basic-datatable"
+              class="table dt-responsive nowrap w-100"
+            >
+              <thead>
+                <tr>
+                  <th>word</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>অভাব, ঠ্যক, ঠেহাল, মংগা, আমি, আঁই, মুই, আমাক, হামি</td>
+                </tr>
+                <tr>
+                  <td>
+                    আপনি, অনে, আমনে, আইনহে, আপনেক, আমরা, আঁরা, বেটটি, হামরা
+                  </td>
+                </tr>
+                <tr>
+                  <td>আমাদের, আঁরার, আমগোর, আমারেক, হামার, আন্ডার, আম্রার</td>
+                </tr>
+                <tr>
+                  <td>
+                    আসুন, আইয়্যুন, আয়েন, আহুইন, আ্যাসেন, আসেন, আইয়েন, আইয়ুইন
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    আরও, আরো, মেলা, আছেনি, উঠানো, উডোই রাহো, তুলি রাহো, উডান,
+                    উচ্কান, তুইল্লা, তুলা, উডাউ
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    এভাবে, এনে, এন্ডেইল্লে, এমনে, এই-ক্যাোরি, এম্নে, এগুলি,
+                    এগিন, এডই, এইতা, ইলাখান, এগুলা, এগিন, ইতা
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    এসেছেন, আইস্যি, আইসুইন, আ্যাসিছেন, আসিছিলেন, আইছে, আইসইন,
+                    ঐভাবে, এমতে, ঐ-ক্যোরি, ওইলাখান
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ওভাবে, হেন্নে, অইরম, এটা, ইয়েন, এডা, এডি, ওইটা, ওটা, ইয়েন,
+                    ইটা, ওকে, ইতেরে, ও কেডা, ওক, ওগু, হেতেরে, এরে
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    কোথায়, হন্ডে, কুইনে, কোতি, কূনানো, কোনঠে, কনতে, কোনানে, কর,
+                    কইরালা, করতে লাগো
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    কিভাবে, কেনে, হইল্লে, হইন্ডেল্লে, কেমতে, কি-ক্যাোরি, কি
+                    লাখান, কেন্নে
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    করেছি, গইরগি, গইজ্জি, কইরালছি, করিছি, কইচ্ছি, কি, কিতা,
+                    কি-বে, খাওয়া, হন্, খাওন, খ্যা
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    খারাপ, হারাপ, খরাপ, গোসল, সিয়ান, গা-ধোয়া, গর্ত, গাঁত, গাতা,
+                    খাদ, ঘাতা
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    হয়েছে, অইয়্যি, হইসে, হ্যোচে, অইছে, ওইছে, হাসি, আসি, ভেটকা,
+                    আসি, চুলা, ছুলো, চ্যুলি, উন্দাল, হুনদাল
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ছোটো, ছুডো, ছুটু, হোরো, ছোটোকোনা, ছোড, শুনো, উনো, হুনহাইন,
+                    শুনেক, হোনো, হুনো
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    রন্নাঘর, বোসহানা, আখাড়-পাড়, ফাকঘর, আন্দঘর, হাকঘরে,
+                    চুলাদ্দুয়ারে, পাকঘর
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    থাকতে, থাইকতে, থাহুইন, থাকতি, থ্যাকতে, থাইকতো, থাকি, থাহি,
+                    থাগি, থ্যাকি, নিজের, নিজুর, লিজের, নেই, নাই, নেয়া, লন্
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end card body-->
+          <!-- end card-body-->
+        </div>
+        <!-- end card-->
+      </div>
+      <!-- end col-->
+    </div>
+    <!-- end row -->
+
     <script src="js/recorder.js"></script>
     <script src="js/app.js"></script>
+    <!-- Vendor js -->
+    <script src="../assets/js/vendor.min.js"></script>
+
+    <!-- Plugin js-->
+    <script src="../assets/libs/parsleyjs/parsley.min.js"></script>
+
+    <!-- Validation init js-->
+    <script src="../assets/js/pages/form-validation.init.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/app.min.js"></script>
   </body>
 </html>
