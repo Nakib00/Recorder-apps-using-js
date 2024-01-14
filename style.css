@@ -104,3 +104,10 @@ li {
 #recordingsList{
 	max-width: 28em;
 }
+.table td{
+  color: black;
+}
+
+.row a{
+  color: #005A9C;
+}
