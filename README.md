@@ -25,8 +25,3 @@ Check out the live demo: [Raw Recorder Demo](https://nakib00.github.io/Recorder-
 
 Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests. Your contributions help improve the functionality and usability of Raw Recorder.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the software as long as the original license is included.
-
-Happy recording!
