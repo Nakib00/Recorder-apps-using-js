@@ -168,3 +168,7 @@ function createDownloadLink(blob) {
   //add the li element to the ol
   recordingsList.appendChild(li);
 }
+
+// app.js
+
+
